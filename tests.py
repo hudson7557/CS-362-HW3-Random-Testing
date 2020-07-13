@@ -9,9 +9,9 @@ from credit_card_validator import credit_card_validator
 
 class CreditCardTests(unittest.TestCase):
 
-    number_of_visa_tests = 10000
-    number_of_mc_tests = 10000
-    number_of_ae_tests = 20000
+    number_of_visa_tests = 20000
+    number_of_mc_tests = 20000
+    number_of_ae_tests = 40000
 
     # Visa Tests
 
@@ -94,4 +94,3 @@ class CreditCardTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
-
