@@ -76,21 +76,22 @@ class CreditCardTests(unittest.TestCase):
     # American Express prefix around 34 and 37 (allows for outliers)
     # less than 15 digits, check sum is random
     for i in range(number_of_ae_tests):
-        num = random.randint(33000000000000, 38999999999999)
+        num = random.randint(32000000000000, 39999999999999)
         credit_card_validator(str(num))
 
     # American Express prefix around 34 and 37 (allows for outliers)
     # 15 digits, check sum is random
     for i in range(number_of_ae_tests):
-        num = random.randint(330000000000000, 389999999999999)
+        num = random.randint(320000000000000, 399999999999999)
         credit_card_validator(str(num))
 
     # American Express prefix around 34 and 37 (allows for outliers)
-    # 15 digits, check sum is random
+    # more than 15 digits, check sum is random
     for i in range(number_of_ae_tests):
-        num = random.randint(3300000000000000, 3899999999999999)
+        num = random.randint(3200000000000000, 3999999999999999)
         credit_card_validator(str(num))
 
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
