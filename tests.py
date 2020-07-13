@@ -21,13 +21,15 @@ class CreditCardTests(unittest.TestCase):
         number_of_tests = 10000
         for i in range(number_of_tests):
             num = random.randint(4000000000000000, 4999999999999999)
-            credit_card_validator(str(num))
+            if not credit_card_validator(str(num)):
+                print('Error {}')
 
     def visa_15_digits(self):
         number_of_tests = 10000
         for i in range(number_of_tests):
             num = random.randint(400000000000000, 499999999999999)
-            credit_card_validator(str(num))
+            if not credit_card_validator(str(num)):
+                print('Error {}')
 
 
 # Master Card generators
