@@ -9,9 +9,9 @@ from credit_card_validator import credit_card_validator
 
 class CreditCardTests(unittest.TestCase):
 
-    number_of_visa_tests = 20000
-    number_of_mc_tests = 20000
-    number_of_ae_tests = 40000
+    number_of_visa_tests = 80000
+    number_of_mc_tests = 80000
+    number_of_ae_tests = 160000
 
     # Visa Tests
 
@@ -76,21 +76,22 @@ class CreditCardTests(unittest.TestCase):
     # American Express prefix around 34 and 37 (allows for outliers)
     # less than 15 digits, check sum is random
     for i in range(number_of_ae_tests):
-        num = random.randint(32000000000000, 39999999999999)
+        num = random.randint(32000000000000, 38999999999999)
         credit_card_validator(str(num))
 
     # American Express prefix around 34 and 37 (allows for outliers)
     # 15 digits, check sum is random
     for i in range(number_of_ae_tests):
-        num = random.randint(320000000000000, 399999999999999)
+        num = random.randint(320000000000000, 389999999999999)
         credit_card_validator(str(num))
 
     # American Express prefix around 34 and 37 (allows for outliers)
     # more than 15 digits, check sum is random
     for i in range(number_of_ae_tests):
-        num = random.randint(3200000000000000, 3999999999999999)
+        num = random.randint(3200000000000000, 3899999999999999)
         credit_card_validator(str(num))
 
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
+
