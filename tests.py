@@ -9,7 +9,7 @@ from credit_card_validator import credit_card_validator
 
 class CreditCardTests(unittest.TestCase):
 
-    number_of_visa_tests = 80000
+    number_of_visa_tests = 100000
     number_of_mc_tests = 80000
     number_of_ae_tests = 80000
 
