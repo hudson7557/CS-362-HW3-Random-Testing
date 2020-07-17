@@ -14,3 +14,11 @@ for num in nums:
     print(round(num, -16))
     if round(num, -15) > 4000000000000000:
         print(round(num, -15), "okay")
+
+num = "4089767900471111"
+total = 0
+
+for digit in num:
+    total = total + int(digit)
+
+print(total)
