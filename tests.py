@@ -14,8 +14,8 @@ class CreditCardTests(unittest.TestCase):
     number_of_ae_tests = 160000
 
     credit_card_validator("4052598627176748")
-    credit_card_validator("4051598627176748")
-    credit_card_validator("4053598627176748")
+    credit_card_validator("4051598627176749")
+    credit_card_validator("4053598627176747")
 
 """    # Visa Tests
 
