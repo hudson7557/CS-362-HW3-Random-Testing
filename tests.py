@@ -13,7 +13,11 @@ class CreditCardTests(unittest.TestCase):
     number_of_mc_tests = 80000
     number_of_ae_tests = 160000
 
-    # Visa Tests
+    credit_card_validator("4052598627176748")
+    credit_card_validator("4051598627176748")
+    credit_card_validator("4053598627176748")
+
+"""    # Visa Tests
 
     # Visa prefix, less than 16 digits, check sum is random
     for i in range(number_of_visa_tests):
@@ -90,7 +94,7 @@ class CreditCardTests(unittest.TestCase):
     for i in range(number_of_ae_tests):
         num = random.randint(3200000000000000, 3899999999999999)
         credit_card_validator(str(num))
-
+"""
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
